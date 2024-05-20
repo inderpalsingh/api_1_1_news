@@ -26,8 +26,9 @@ class HomePage extends StatelessWidget {
 
             if(snapshot.hasData){
               MainModel allNews = snapshot.data!;
+       
               return ListView.builder(
-                itemCount: snapshot.data!.articles!.length,
+                itemCount: allNews.articles!.length,
                 itemBuilder: (context, index) {
                   return Column(
                     children: [
@@ -63,5 +64,6 @@ class HomePage extends StatelessWidget {
       print(rawData);
       news = MainModel.fromJson(rawData);
     }
+    return news;
   }
 }
