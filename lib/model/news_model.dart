@@ -1,11 +1,11 @@
 class NewsModel {
-  String author;
-  String title;
-  String url;
-  String urlToImage;
-  String publishedAt;
-  String content;
-  SourceModel source;
+  String? author;
+  String? title;
+  String? url;
+  String? urlToImage;
+  String? publishedAt;
+  String? content;
+  SourceModel? source;
 
   NewsModel({
     required this.author,
@@ -16,7 +16,7 @@ class NewsModel {
       required this.content,
     required this.source
    });
-  
+
   factory NewsModel.fromJson(Map<String, dynamic> json){
     return NewsModel(
         author: json['author'],
@@ -37,14 +37,14 @@ class NewsModel {
 class SourceModel{
   int id;
   String name;
-  
+
   SourceModel({required this.id, required this.name});
-  
+
   factory SourceModel.fromJson(Map<String, dynamic> sourceJson){
     return SourceModel(
         id: sourceJson['id'],
         name: sourceJson['name']
     );
   }
-  
+
 }
