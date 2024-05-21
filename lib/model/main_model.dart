@@ -21,7 +21,7 @@ class MainModel{
     return MainModel(
         status: json['status'],
         totalResults: json['totalResults'],
-        articles: json['articles']
+        articles: getNewsList
     );
   }
 }

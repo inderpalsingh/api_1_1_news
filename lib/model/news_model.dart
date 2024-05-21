@@ -8,13 +8,13 @@ class NewsModel {
   SourceModel? source;
 
   NewsModel({
-    required this.author,
+      required this.author,
       required this.title,
       required this.url,
       required this.urlToImage,
       required this.publishedAt,
       required this.content,
-    required this.source
+      required this.source
    });
 
   factory NewsModel.fromJson(Map<String, dynamic> json){
@@ -35,8 +35,8 @@ class NewsModel {
 
 
 class SourceModel{
-  int id;
-  String name;
+  String? id;
+  String? name;
 
   SourceModel({required this.id, required this.name});
 
