@@ -4,6 +4,7 @@ class NewsModel {
   String? url;
   String? urlToImage;
   String? publishedAt;
+  String? description;
   String? content;
   SourceModel? source;
 
@@ -13,6 +14,7 @@ class NewsModel {
       required this.url,
       required this.urlToImage,
       required this.publishedAt,
+      required this.description,
       required this.content,
       required this.source
    });
@@ -24,6 +26,7 @@ class NewsModel {
         url: json['url'],
         urlToImage: json['urlToImage'],
         publishedAt: json['publishedAt'],
+        description: json['description'],
         content: json['content'],
         source: SourceModel.fromJson(json['source'])
     );

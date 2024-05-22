@@ -27,12 +27,14 @@ class DetailPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
               child: Column(
-                
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
                   Text('${newsModel.title}', style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                   const SizedBox(height: 20),
                   Text('${newsModel.content}', style: const TextStyle(fontSize: 20)),
+                  const SizedBox(height: 10),
+                  Text('${newsModel.description}', style: const TextStyle(fontSize: 20)),
                   const SizedBox(height: 20),
                   Text('Source: ${newsModel.source!.name}', style: const TextStyle(fontSize: 20)),
                   Text('Author: ${newsModel.author}', style: const TextStyle(fontSize: 20)),
