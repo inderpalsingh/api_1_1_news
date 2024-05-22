@@ -19,8 +19,17 @@ class _HomePageState extends State<HomePage> {
 
   TextEditingController searchController = TextEditingController();
 
+
+  @override
+  void dispose() {
+    super.dispose();
+    searchController.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
+    searchController.clear();
     return SafeArea(
       child: Scaffold(
           body: Padding(
@@ -39,6 +48,9 @@ class _HomePageState extends State<HomePage> {
                       setState(() {
                         
                       });
+
+                        
+                      
                     },
                     controller: searchController,
                     decoration: InputDecoration(
